@@ -1,0 +1,129 @@
+:root{
+  --Softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --VerydarkblueMain: hsl(217, 54%, 11%);/* (main BG)*/
+  --VerydarkblueCard: hsl(216, 50%, 16%); /* (card BG)*/
+  --Verydarkblue: hsl(215, 32%, 27%);/*line*/
+  --white: hsl(0, 0%, 100%);
+  --font:'Outfit', sans-serif;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+  font-family: var(--font);
+  background-color: var(--VerydarkblueMain);
+  font-size: 18px;
+  padding: 2rem;
+}
+img{
+  max-width: 100%;
+  border-radius: 1rem;
+}
+.container{
+  padding: 2rem;
+  height: calc(100vh- 1px);
+  background-color: var(--VerydarkblueCard);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h2{
+  color: var(--white);
+  font-weight: 600;
+  font-size: 25px;
+
+}
+p{
+  color: rgba(255, 255, 255, 0.801);
+  font-weight: 300;
+  font-size: 18px;
+  padding-right: 1rem;
+}
+span{
+  color: var(--white);
+  font-weight: 400;
+}
+.container ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid white ;
+}
+ul{
+  list-style-type: none;
+  color: white;
+}
+.container ul li{
+  display: flex;
+  align-items: center;
+
+}
+.container ul li img{
+  margin-right: .4rem;
+}
+.container ul li:first-child{
+  color: var(--cyan);
+}
+.container ul li:last-child{
+  color: var(--Softblue);
+}
+.container article p span:hover,
+h2:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
+.container .imagen{
+  position: relative;
+}
+.container.cyan{
+  position: absolute;
+  background-color: var(--cyan);
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+article{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: -1rem;
+}
+article img {
+  width: 2.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+article p{
+  padding-left: 1rem;
+}
+/******Footer******/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media(min-width:500px) {
+    .container{
+      width: 450px;
+      margin: 0 -1rem 1rem;   
+    }
+    /* body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+    } */
+}
+@media(min-width:720px) {
+  .container{
+    width: 450px;
+    margin: 0 auto 1rem;   
+  }
+}
